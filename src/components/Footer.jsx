@@ -4,9 +4,9 @@ import { motion, useInView } from "framer-motion";
 const navLinks = ["About", "Skills", "Projects", "Services", "Contact"];
 
 const socials = [
-  { label: "G", title: "GitHub",   href: "https://github.com" },
-  { label: "in", title: "LinkedIn", href: "https://linkedin.com" },
-  { label: "W", title: "WhatsApp", href: "https://wa.me/916372486617" },
+  { label: "G",  title: "GitHub",   href: "https://github.com/Vickysahu12" },
+  { label: "in", title: "LinkedIn", href: "https://www.linkedin.com/in/vicky-sahu-234679326/" },
+  { label: "W",  title: "WhatsApp", href: "https://wa.me/916372486617" },
 ];
 
 export default function Footer() {
@@ -52,9 +52,9 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   title={s.title}
-                  whileHover={{ scale: 1.15, borderColor: "rgba(201,168,76,0.5)", color: "#c9a84c" }}
+                  whileHover={{ scale: 1.15 }}
                   whileTap={{ scale: 0.9 }}
-                  className="w-8 h-8 bg-[#111] border border-white/10 rounded-lg text-gray-400 text-xs flex items-center justify-center font-bold transition-colors"
+                  className="w-8 h-8 bg-[#111] border border-white/10 rounded-lg text-gray-400 text-xs flex items-center justify-center font-bold hover:border-[#c9a84c]/50 hover:text-[#c9a84c] transition-colors"
                 >
                   {s.label}
                 </motion.a>

@@ -28,20 +28,12 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-
     try {
-      // ── EmailJS setup ──────────────────────────────────────────────
-      // 1. Go to https://www.emailjs.com and create a free account
-      // 2. Add an Email Service (Gmail) → copy Service ID
-      // 3. Create an Email Template → copy Template ID
-      // 4. Copy your Public Key from Account → API Keys
-      // 5. Replace the 3 strings below with your actual IDs
-      // ──────────────────────────────────────────────────────────────
       await emailjs.sendForm(
-        "YOUR_SERVICE_ID",    // 👈 replace
-        "YOUR_TEMPLATE_ID",   // 👈 replace
+        "service_4x7h7go",
+        "template_gyvf1pf",
         formRef.current,
-        "YOUR_PUBLIC_KEY"     // 👈 replace
+        "cbSqW-oWZqViJ3yCW"
       );
       setSent(true);
       setForm({ name: "", email: "", service: "", message: "" });
@@ -114,7 +106,8 @@ export default function Contact() {
             >
               <div className="text-[#c9a84c] font-bold mb-2">✦ Free Consultation</div>
               <p className="text-gray-400 text-sm leading-relaxed">
-                First consultation is completely free. Share your idea and get a custom quotation within 24 hours — no strings attached.
+                First consultation is completely free. Share your idea and get a custom
+                quotation within 24 hours — no strings attached.
               </p>
             </motion.div>
           </motion.div>
@@ -141,7 +134,9 @@ export default function Contact() {
                   ✅
                 </motion.div>
                 <div className="text-white font-bold text-lg">Message Sent!</div>
-                <div className="text-gray-400 text-sm text-center">We'll get back to you within 24 hours.</div>
+                <div className="text-gray-400 text-sm text-center">
+                  We'll get back to you within 24 hours.
+                </div>
               </motion.div>
             ) : (
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
@@ -180,7 +175,9 @@ export default function Contact() {
                     className="w-full bg-[#0a0a0a] border border-white/10 rounded-lg px-4 py-3 text-sm text-gray-300 focus:outline-none focus:border-[#c9a84c]/50 transition-colors"
                   >
                     <option value="">Select a service</option>
-                    {services.map((s) => <option key={s} value={s}>{s}</option>)}
+                    {services.map((s) => (
+                      <option key={s} value={s}>{s}</option>
+                    ))}
                   </select>
                 </div>
 
