@@ -53,7 +53,7 @@ export default function Navbar() {
           </span>
         </motion.div>
 
-        {/* Desktop Nav */}
+        {/* Desktop Navbar */}
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <li key={link} className="relative">
@@ -79,7 +79,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CTA */}
+        {/* CTA button */}
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
