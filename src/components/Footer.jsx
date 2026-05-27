@@ -1,12 +1,31 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaWhatsapp,
+  FaEnvelope,
+  FaPhoneAlt,
+} from "react-icons/fa";
 
 const navLinks = ["About", "Skills", "Projects", "Services", "Contact"];
 
 const socials = [
-  { label: "G",  title: "GitHub",   href: "https://github.com/Vickysahu12" },
-  { label: "in", title: "LinkedIn", href: "https://www.linkedin.com/in/vicky-sahu-234679326/" },
-  { label: "W",  title: "WhatsApp", href: "https://wa.me/916372486617" },
+  {
+    icon: <FaGithub />,
+    title: "GitHub",
+    href: "https://github.com/Vickysahu12",
+  },
+  {
+    icon: <FaLinkedinIn />,
+    title: "LinkedIn",
+    href: "https://www.linkedin.com/in/vicky-sahu-234679326/",
+  },
+  {
+    icon: <FaWhatsapp />,
+    title: "WhatsApp",
+    href: "https://wa.me/916372486617",
+  },
 ];
 
 export default function Footer() {
@@ -54,9 +73,9 @@ export default function Footer() {
                   title={s.title}
                   whileHover={{ scale: 1.15 }}
                   whileTap={{ scale: 0.9 }}
-                  className="w-8 h-8 bg-[#111] border border-white/10 rounded-lg text-gray-400 text-xs flex items-center justify-center font-bold hover:border-[#c9a84c]/50 hover:text-[#c9a84c] transition-colors"
+                  className="w-10 h-10 bg-[#111] border border-white/10 rounded-xl text-gray-400 text-sm flex items-center justify-center hover:border-[#c9a84c]/50 hover:text-[#c9a84c] hover:bg-[#c9a84c]/10 transition-all duration-300 shadow-lg shadow-black/20"
                 >
-                  {s.label}
+                  {s.icon}
                 </motion.a>
               ))}
             </div>
@@ -93,19 +112,21 @@ export default function Footer() {
             <div className="text-xs text-gray-500 tracking-widest uppercase mb-4">Contact</div>
             <div className="space-y-2">
               <motion.a
-                href="mailto:bikisahu161@gmail.com"
-                whileHover={{ x: 3, color: "#c9a84c" }}
-                className="text-sm text-gray-400 block transition-colors"
-              >
-                bikisahu161@gmail.com
-              </motion.a>
+  href="mailto:bikisahu161@gmail.com"
+  whileHover={{ x: 3, color: "#c9a84c" }}
+  className="text-sm text-gray-400 flex items-center gap-2 transition-colors"
+>
+  <FaEnvelope className="text-[#c9a84c]" />
+  bikisahu161@gmail.com
+</motion.a>
               <motion.a
-                href="tel:+916372486617"
-                whileHover={{ x: 3, color: "#c9a84c" }}
-                className="text-sm text-gray-400 block transition-colors"
-              >
-                +91 6372486617
-              </motion.a>
+  href="tel:+916372486617"
+  whileHover={{ x: 3, color: "#c9a84c" }}
+  className="text-sm text-gray-400 flex items-center gap-2 transition-colors"
+>
+  <FaPhoneAlt className="text-[#c9a84c]" />
+  +91 6372486617
+</motion.a>
             </div>
           </motion.div>
         </div>

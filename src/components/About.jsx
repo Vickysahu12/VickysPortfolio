@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import Vicky from "../assets/Image/Vicky.jpg"
 
 const stats = [
   { value: 20, suffix: "+", label: "Projects Completed" },
@@ -68,8 +69,12 @@ export default function About() {
             className="flex justify-center"
           >
             <div className="relative w-72 h-72 md:w-80 md:h-80">
-              <div className="w-full h-full rounded-2xl bg-[#111] border border-[#c9a84c]/20 flex items-center justify-center overflow-hidden">
-                <div className="text-6xl opacity-20">👤</div>
+              <div className="w-full h-full rounded-2xl bg-[#111] border border-[#c9a84c]/20 overflow-hidden">
+                  <img
+                    src={Vicky}
+                    alt="Vicky"
+                    className="w-full h-125 object-cover object-center"
+                  />
               </div>
               <motion.div
                 className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#c9a84c] rounded-tl-2xl"

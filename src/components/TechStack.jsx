@@ -1,19 +1,38 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import {
+  FaReact,
+  FaNodeJs,
+  FaMobileAlt,
+  FaDatabase,
+  FaAws,
+  FaFigma,
+} from "react-icons/fa";
+
+import {
+  SiMongodb,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiPostgresql,
+  SiFirebase,
+  SiFlutter,
+} from "react-icons/si";
+
+import { TbApi } from "react-icons/tb";
 
 const techs = [
-  { name: "React.js",     icon: "⚛️" },
-  { name: "Node.js",      icon: "</>" },
-  { name: "React Native", icon: "📱" },
-  { name: "MongoDB",      icon: "🍃" },
-  { name: "Next.js",      icon: "▲" },
-  { name: "Tailwind CSS", icon: "🎨" },
-  { name: "REST API",     icon: "🔗" },
-  { name: "PostgreSQL",   icon: "🐘" },
-  { name: "Firebase",     icon: "🔥" },
-  { name: "AWS",          icon: "☁️" },
-  { name: "Flutter",      icon: "💙" },
-  { name: "Figma",        icon: "✏️" },
+  { name: "React.js", icon: <FaReact /> },
+  { name: "Node.js", icon: <FaNodeJs /> },
+  { name: "React Native", icon: <FaMobileAlt /> },
+  { name: "MongoDB", icon: <SiMongodb /> },
+  { name: "Next.js", icon: <SiNextdotjs /> },
+  { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+  { name: "REST API", icon: <TbApi /> },
+  { name: "PostgreSQL", icon: <SiPostgresql /> },
+  { name: "Firebase", icon: <SiFirebase /> },
+  { name: "AWS", icon: <FaAws /> },
+  { name: "Flutter", icon: <SiFlutter /> },
+  { name: "Figma", icon: <FaFigma /> },
 ];
 
 const container = {
@@ -63,7 +82,9 @@ export default function TechStack() {
               whileHover={{ y: -6, scale: 1.05, borderColor: "rgba(201,168,76,0.5)" }}
               className="group bg-[#111] border border-white/5 rounded-xl p-4 flex flex-col items-center gap-2 cursor-default transition-colors hover:bg-[#c9a84c]/5"
             >
-              <span className="text-2xl">{tech.icon}</span>
+              <span className="text-3xl text-[#c9a84c] group-hover:scale-110 transition-transform">
+  {tech.icon}
+</span>
               <span className="text-gray-400 text-xs text-center group-hover:text-white transition-colors tracking-wide">
                 {tech.name}
               </span>

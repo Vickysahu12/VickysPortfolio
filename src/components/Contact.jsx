@@ -1,5 +1,11 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import {
+  FaEnvelope,
+  FaPhoneAlt,
+  FaClock,
+  FaCheckCircle,
+} from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
 const services = ["Website Development", "Web Application", "Mobile App", "E-Commerce", "UI/UX Design", "Other"];
@@ -10,9 +16,21 @@ const fadeUp = (delay = 0) => ({
 });
 
 const contactItems = [
-  { icon: "📧", label: "Email",         value: "bikisahu161@gmail.com" },
-  { icon: "📞", label: "Phone",         value: "+91 6372486617" },
-  { icon: "⏱",  label: "Response Time", value: "Within 24 hours" },
+  {
+    icon: <FaEnvelope />,
+    label: "Email",
+    value: "bikisahu161@gmail.com",
+  },
+  {
+    icon: <FaPhoneAlt />,
+    label: "Phone",
+    value: "+91 6372486617",
+  },
+  {
+    icon: <FaClock />,
+    label: "Response Time",
+    value: "Within 24 hours",
+  },
 ];
 
 export default function Contact() {
@@ -88,7 +106,7 @@ export default function Contact() {
                     transition={{ delay: 0.3 + i * 0.1, duration: 0.4 }}
                     className="flex items-center gap-3"
                   >
-                    <div className="w-9 h-9 bg-[#c9a84c]/10 rounded-lg flex items-center justify-center text-[#c9a84c] flex-shrink-0">
+                    <div className="w-11 h-11 bg-[#c9a84c]/10 border border-[#c9a84c]/20 rounded-xl flex items-center justify-center text-[#c9a84c] text-sm flex-shrink-0 shadow-lg shadow-[#c9a84c]/10">
                       {item.icon}
                     </div>
                     <div>
@@ -127,12 +145,12 @@ export default function Contact() {
                 className="h-full flex flex-col items-center justify-center gap-3 py-10"
               >
                 <motion.div
-                  animate={{ rotate: [0, 15, -15, 0], scale: [1, 1.2, 1] }}
-                  transition={{ duration: 0.5 }}
-                  className="text-4xl"
-                >
-                  ✅
-                </motion.div>
+  animate={{ rotate: [0, 15, -15, 0], scale: [1, 1.2, 1] }}
+  transition={{ duration: 0.5 }}
+  className="text-5xl text-[#c9a84c] drop-shadow-[0_0_12px_rgba(201,168,76,0.5)]"
+>
+  <FaCheckCircle />
+</motion.div>
                 <div className="text-white font-bold text-lg">Message Sent!</div>
                 <div className="text-gray-400 text-sm text-center">
                   We'll get back to you within 24 hours.

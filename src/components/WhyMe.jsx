@@ -1,30 +1,36 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import {
+  FaBolt,
+  FaBullseye,
+  FaFlask,
+  FaComments,
+} from "react-icons/fa";
 
 const reasons = [
   {
-    icon: "⚡",
+    icon: <FaBolt />,
     title: "Fast Delivery",
     desc: "Rapid development with efficient deployment processes. No compromise on quality.",
     stat: "2x",
     statLabel: "Faster than average",
   },
   {
-    icon: "🎯",
+    icon: <FaBullseye />,
     title: "Custom Built",
     desc: "Individually crafted solutions. No templates, built exactly for your needs.",
     stat: "100%",
     statLabel: "Custom every time",
   },
   {
-    icon: "🧪",
+    icon: <FaFlask />,
     title: "QA Excellence",
     desc: "Rigorous testing protocols ensuring the highest standards and flawless performance.",
     stat: "0",
     statLabel: "Bug tolerance",
   },
   {
-    icon: "💬",
+    icon: <FaComments />,
     title: "Clear Support",
     desc: "Direct access to senior tech talent for ongoing maintenance and instant clarity.",
     stat: "24h",
@@ -105,7 +111,7 @@ export default function WhyMe() {
               <motion.div
                 whileHover={{ rotate: [0, -12, 12, 0], scale: 1.2 }}
                 transition={{ duration: 0.4 }}
-                className="w-14 h-14 bg-[#c9a84c]/10 border border-[#c9a84c]/20 rounded-full flex items-center justify-center text-2xl mx-auto mb-5 group-hover:bg-[#c9a84c]/20 transition-colors relative z-10"
+                className="w-14 h-14 bg-[#c9a84c]/10 border border-[#c9a84c]/20 rounded-2xl flex items-center justify-center text-2xl text-[#c9a84c] mx-auto mb-5 group-hover:bg-[#c9a84c]/20 transition-all duration-300 shadow-lg shadow-[#c9a84c]/10 relative z-10"
               >
                 {r.icon}
               </motion.div>

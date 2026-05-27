@@ -1,13 +1,46 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import {
+  FaGlobe,
+  FaBolt,
+  FaShoppingCart,
+  FaMobileAlt,
+  FaPaintBrush,
+} from "react-icons/fa";
+
+import { TbApi } from "react-icons/tb";
 
 const services = [
-  { icon: "🌐", title: "Website Dev",     desc: "Stunning, high-performance websites built for the next generation of businesses. Responsive, fast, and SEO optimised." },
-  { icon: "⚡", title: "Web Apps",        desc: "Complex, feature-rich web platforms and dashboards with clean UX, real-time data, and high availability." },
-  { icon: "🛒", title: "E-Commerce",      desc: "Complete e-commerce solutions with seamless checkout, payment integration, inventory management, and high-performance storefront." },
-  { icon: "📱", title: "Mobile Apps",     desc: "Native and cross-platform mobile applications on iOS and Android, built with pixel-perfect precision and performance." },
-  { icon: "🎨", title: "UI/UX Design",    desc: "User-centric design services including wireframes, prototypes, and immersive Figma designs with animation concepts." },
-  { icon: "🔗", title: "API Development", desc: "Scalable REST APIs and third-party integrations that power your apps with efficiency, reliability, and precision." },
+  {
+    icon: <FaGlobe />,
+    title: "Website Dev",
+    desc: "Stunning, high-performance websites built for the next generation of businesses. Responsive, fast, and SEO optimised.",
+  },
+  {
+    icon: <FaBolt />,
+    title: "Web Apps",
+    desc: "Complex, feature-rich web platforms and dashboards with clean UX, real-time data, and high availability.",
+  },
+  {
+    icon: <FaShoppingCart />,
+    title: "E-Commerce",
+    desc: "Complete e-commerce solutions with seamless checkout, payment integration, inventory management, and high-performance storefront.",
+  },
+  {
+    icon: <FaMobileAlt />,
+    title: "Mobile Apps",
+    desc: "Native and cross-platform mobile applications on iOS and Android, built with pixel-perfect precision and performance.",
+  },
+  {
+    icon: <FaPaintBrush />,
+    title: "UI/UX Design",
+    desc: "User-centric design services including wireframes, prototypes, and immersive Figma designs with animation concepts.",
+  },
+  {
+    icon: <TbApi />,
+    title: "API Development",
+    desc: "Scalable REST APIs and third-party integrations that power your apps with efficiency, reliability, and precision.",
+  },
 ];
 
 const container = {
@@ -63,7 +96,7 @@ export default function Services() {
               <motion.div
                 whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
                 transition={{ duration: 0.4 }}
-                className="w-12 h-12 bg-[#c9a84c]/10 border border-[#c9a84c]/20 rounded-xl flex items-center justify-center text-xl mb-5 group-hover:bg-[#c9a84c]/20 transition-colors"
+                className="w-14 h-14 bg-[#c9a84c]/10 border border-[#c9a84c]/20 rounded-2xl flex items-center justify-center text-2xl text-[#c9a84c] mb-5 group-hover:bg-[#c9a84c]/20 transition-all duration-300 shadow-lg shadow-[#c9a84c]/10"
               >
                 {svc.icon}
               </motion.div>
